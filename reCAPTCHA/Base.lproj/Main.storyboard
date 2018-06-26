@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iHm-Hq-uUN">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="WR0-Qt-I7V">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" id="h37-Dk-b1t" customClass="HomeViewController" customModule="reCAPTCHA" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Uli-BF-3Kf" customClass="HomeView">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="buttonFluxoNormal" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wri-WC-HbN">
+                                <rect key="frame" x="20" y="84" width="335" height="30"/>
+                                <state key="normal" title="Seguir para o fluxo normal"/>
+                                <connections>
+                                    <action selector="btnFluxoNormalClick:" destination="h37-Dk-b1t" eventType="touchUpInside" id="Ztc-6q-CFl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="buttonFluxoTokenDuplicado" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2eO-jy-GRS">
+                                <rect key="frame" x="20" y="234" width="335" height="30"/>
+                                <state key="normal" title="Seguir para o fluxo com token duplicado"/>
+                                <connections>
+                                    <action selector="btnTokenDuplicadoClick:" destination="h37-Dk-b1t" eventType="touchUpInside" id="rfe-nR-e75"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="buttonFluxoSecretInvalida" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uf9-ut-cs0">
+                                <rect key="frame" x="20" y="184" width="335" height="30"/>
+                                <state key="normal" title="Seguir para o fluxo com Secret inválida"/>
+                                <connections>
+                                    <action selector="btnSecretInvalidaClick:" destination="h37-Dk-b1t" eventType="touchUpInside" id="BbK-BQ-lFM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="buttonFluxoTokenInvalido" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3JL-Lm-bgA">
+                                <rect key="frame" x="20" y="134" width="335" height="30"/>
+                                <state key="normal" title="Seguir para o fluxo com token inválido"/>
+                                <connections>
+                                    <action selector="btnTokenInvalidoClick:" destination="h37-Dk-b1t" eventType="touchUpInside" id="pDy-HE-kR7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="3JL-Lm-bgA" firstAttribute="top" secondItem="Wri-WC-HbN" secondAttribute="bottom" constant="20" id="82i-25-shv"/>
+                            <constraint firstItem="3Z8-Gc-fhx" firstAttribute="trailing" secondItem="3JL-Lm-bgA" secondAttribute="trailing" constant="20" id="Gd8-8O-VNf"/>
+                            <constraint firstItem="2eO-jy-GRS" firstAttribute="top" secondItem="Uf9-ut-cs0" secondAttribute="bottom" constant="20" id="Hi9-Ve-Dvf"/>
+                            <constraint firstItem="3Z8-Gc-fhx" firstAttribute="trailing" secondItem="Uf9-ut-cs0" secondAttribute="trailing" constant="20" id="IbW-yx-wim"/>
+                            <constraint firstItem="3JL-Lm-bgA" firstAttribute="leading" secondItem="3Z8-Gc-fhx" secondAttribute="leading" constant="20" id="L8o-db-Gyg"/>
+                            <constraint firstItem="Wri-WC-HbN" firstAttribute="leading" secondItem="3Z8-Gc-fhx" secondAttribute="leading" constant="20" id="NkZ-9x-4Xo"/>
+                            <constraint firstItem="Wri-WC-HbN" firstAttribute="top" secondItem="3Z8-Gc-fhx" secondAttribute="top" constant="20" id="Nr8-Wy-duh"/>
+                            <constraint firstItem="3Z8-Gc-fhx" firstAttribute="trailing" secondItem="Wri-WC-HbN" secondAttribute="trailing" constant="20" id="ZiX-Vo-xZv"/>
+                            <constraint firstItem="Uf9-ut-cs0" firstAttribute="top" secondItem="3JL-Lm-bgA" secondAttribute="bottom" constant="20" id="bed-oe-vBu"/>
+                            <constraint firstItem="3Z8-Gc-fhx" firstAttribute="trailing" secondItem="2eO-jy-GRS" secondAttribute="trailing" constant="20" id="c2H-14-L0J"/>
+                            <constraint firstItem="Uf9-ut-cs0" firstAttribute="leading" secondItem="3Z8-Gc-fhx" secondAttribute="leading" constant="20" id="d3p-qY-P78"/>
+                            <constraint firstItem="2eO-jy-GRS" firstAttribute="leading" secondItem="3Z8-Gc-fhx" secondAttribute="leading" constant="20" id="lPb-lz-uoX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3Z8-Gc-fhx"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="FHS-c0-AaU"/>
+                    <connections>
+                        <outlet property="buttonFluxoNormal" destination="Wri-WC-HbN" id="dgh-MU-xKk"/>
+                        <outlet property="buttonFluxoSecretInvalida" destination="Uf9-ut-cs0" id="aQ9-8Z-cXA"/>
+                        <outlet property="buttonFluxoTokenDuplicado" destination="2eO-jy-GRS" id="Aul-Y5-8iY"/>
+                        <outlet property="buttonFluxoTokenInvalido" destination="3JL-Lm-bgA" id="4Kz-9c-aJV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ss3-vP-jNf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="317.60000000000002" y="114.69265367316342"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="reCaptchaController" id="BYZ-38-t0r" customClass="ViewController" customModule="reCAPTCHA" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" restorationIdentifier="viewWeb" translatesAutoresizingMaskIntoConstraints="NO" id="66b-Yd-I6E">
+                                <rect key="frame" x="0.0" y="20" width="375" height="293"/>
+                                <subviews>
+                                    <wkWebView contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="UF3-v8-Wgc">
+                                        <rect key="frame" x="25" y="19" width="325" height="254"/>
+                                        <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="254" id="UuB-Wf-WOa"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="275" id="Zlh-tM-HxL"/>
+                                        </constraints>
+                                        <wkWebViewConfiguration key="configuration">
+                                            <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                            <wkPreferences key="preferences"/>
+                                        </wkWebViewConfiguration>
+                                    </wkWebView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="UF3-v8-Wgc" firstAttribute="centerY" secondItem="66b-Yd-I6E" secondAttribute="centerY" id="EDh-lj-g3x"/>
+                                    <constraint firstItem="UF3-v8-Wgc" firstAttribute="top" secondItem="66b-Yd-I6E" secondAttribute="top" constant="19" id="Xbi-zJ-jAO"/>
+                                    <constraint firstItem="UF3-v8-Wgc" firstAttribute="centerX" secondItem="66b-Yd-I6E" secondAttribute="centerX" id="hrf-J7-beV"/>
+                                    <constraint firstItem="UF3-v8-Wgc" firstAttribute="leading" secondItem="66b-Yd-I6E" secondAttribute="leading" constant="25" id="phs-Y4-3Bl"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="66b-Yd-I6E" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="026-yj-mBh"/>
+                            <constraint firstAttribute="trailing" secondItem="66b-Yd-I6E" secondAttribute="trailing" id="CV9-ok-LrD"/>
+                            <constraint firstItem="66b-Yd-I6E" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="FgE-Sh-vaw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="bpe-z6-IMy"/>
+                    <connections>
+                        <outlet property="viewWeb" destination="66b-Yd-I6E" id="kqt-J8-EFE"/>
+                        <outlet property="webView" destination="UF3-v8-Wgc" id="sxb-3G-rvI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="114.69265367316342"/>
+        </scene>
+        <!--SecondVC-->
+        <scene sceneID="fq9-VY-ufY">
+            <objects>
+                <viewController storyboardIdentifier="SecondVC" id="GP7-O6-nxV" customClass="SecondVC" customModule="reCAPTCHA" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ofe-K1-Teh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I3j-eR-gSt">
+                                <rect key="frame" x="16" y="109" width="343" height="156"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Resultado" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vtV-NN-BMx">
+                                <rect key="frame" x="16" y="273" width="343" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Seu token é" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dU1-Kv-PZS">
+                                <rect key="frame" x="16" y="64" width="343" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sucesso ou Falha" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AHE-FU-sQu">
+                                <rect key="frame" x="16" y="315" width="343" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Erros" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rda-23-qRP">
+                                <rect key="frame" x="16" y="360" width="343" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nenhum erro encontrado" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BPb-I3-Ijb">
+                                <rect key="frame" x="16" y="405" width="343" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="sQZ-eG-3K7"/>
+                    </view>
+                    <connections>
+                        <outlet property="errorLabel" destination="BPb-I3-Ijb" id="JXZ-tM-C8m"/>
+                        <outlet property="resultLabel" destination="AHE-FU-sQu" id="7Jk-qi-4wq"/>
+                        <outlet property="tokenLabel" destination="I3j-eR-gSt" id="x00-bC-qec"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wky-G9-2Lw" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1904.8" y="114.69265367316342"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="HTV-nA-7fX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iHm-Hq-uUN" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZJa-x9-fNX">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="h37-Dk-b1t" kind="relationship" relationship="rootViewController" id="499-LC-SVQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Idq-WM-Oj1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="-584.25787106446785"/>
+        </scene>
+    </scenes>
+</document>
